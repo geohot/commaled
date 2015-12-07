@@ -1,0 +1,234 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile C:\Users\IEUser\DOCUME~1\PSOCDE~1.4PR\PDPROJ~1\PDPROJ~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           ;            dat -> X+1
+ 0000           ;            cnt -> X+0
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000 10                push X
+ 0001 4F                mov X,SP
+ 0002 3802              add SP,2
+ 0004                   .dbline 34
+ 0004           ; //----------------------------------------------------------------------------
+ 0004           ; // C main line
+ 0004           ; //----------------------------------------------------------------------------
+ 0004           ; 
+ 0004           ; #include <m8c.h>        // part specific constants and macros
+ 0004           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0004           ; #include <string.h>
+ 0004           ; 
+ 0004           ; // Port_0_0 - Port_0_5 are the 6 led pins
+ 0004           ; #define TOP_BLUE (1 << 4)
+ 0004           ; #define TOP_RED (1 << 2)
+ 0004           ; #define TOP_GREEN (1 << 0)
+ 0004           ; 
+ 0004           ; #define BOT_BLUE (1 << 5)
+ 0004           ; #define BOT_RED (1 << 3)
+ 0004           ; #define BOT_GREEN (1 << 1)
+ 0004           ; 
+ 0004           ; // intensities
+ 0004           ; unsigned char inten[6];
+ 0004           ; 
+ 0004           ; #pragma  ioport   EP1DATA_0:    0x058
+ 0004           ; BYTE              EP1DATA_0;
+ 0004           ; #pragma  ioport   EP1DATA_1:    0x059
+ 0004           ; BYTE              EP1DATA_1;
+ 0004           ; #pragma  ioport   EP1DATA_2:    0x05A
+ 0004           ; BYTE              EP1DATA_2;
+ 0004           ; #pragma  ioport   EP1DATA_3:    0x05B
+ 0004           ; BYTE              EP1DATA_3;
+ 0004           ; #pragma  ioport   EP1DATA_4:    0x05C
+ 0004           ; BYTE              EP1DATA_4;
+ 0004           ; #pragma  ioport   EP1DATA_5:    0x05D
+ 0004           ; BYTE              EP1DATA_5;
+ 0004           ; 
+ 0004           ; void main(void) {
+ 0004                   .dbline 38
+ 0004           ;       unsigned char cnt, dat;
+ 0004           ;       
+ 0004           ;       // init intensities
+ 0004           ;       memset(inten, 0, 6);
+ 0004 5000              mov A,0
+ 0006 08                push A
+ 0007 5006              mov A,6
+ 0009 08                push A
+ 000A 5000              mov A,0
+ 000C 08                push A
+ 000D 08                push A
+ 000E 5000              mov A,>_inten
+ 0010 08                push A
+ 0011 5000              mov A,<_inten
+ 0013 08                push A
+ 0014 7C0000            xcall _memset
+ 0017 38FA              add SP,-6
+ 0019                   .dbline 41
+ 0019           ;       
+ 0019           ;       // testing
+ 0019           ;       inten[0] = 10;
+ 0019 55000A            mov [_inten],10
+ 001C                   .dbline 47
+ 001C           ;       
+ 001C           ;       // enable sleep timer
+ 001C           ;       //INT_MSK0 |= INT_MSK0_SLEEP;
+ 001C           ;       
+ 001C           ;       // enable all interrupts
+ 001C           ;       M8C_EnableGInt;
+ 001C 7101                      or  F, 01h
+ 001E           
+ 001E                   .dbline 50
+ 001E           ;       
+ 001E           ;       // wait for enumeration
+ 001E           ;       USB_Start(0);
+ 001E 10                push X
+ 001F 5000              mov A,0
+ 0021 7C0000            xcall _USB_Start
+ 0024 20                pop X
+ 0025           L3:
+ 0025                   .dbline 51
+ 0025           ;       while (!USB_bGetConfiguration()){}
+ 0025                   .dbline 51
+ 0025           L4:
+ 0025                   .dbline 51
+ 0025 10                push X
+ 0026 7C0000            xcall _USB_bGetConfiguration
+ 0029 20                pop X
+ 002A 3900              cmp A,0
+ 002C AFF8              jz L3
+ 002E                   .dbline 52
+ 002E           ;       USB_EnableEP(1);
+ 002E 10                push X
+ 002F 5001              mov A,1
+ 0031 7C0000            xcall _USB_EnableEP
+ 0034 20                pop X
+ 0035                   .dbline 56
+ 0035           ;       
+ 0035           ;       //USB_bReadOutEP
+ 0035           ;       
+ 0035           ;       cnt = 0;
+ 0035 560000            mov [X+0],0
+ 0038 8063              xjmp L7
+ 003A           L6:
+ 003A                   .dbline 57
+ 003A           ;       while (1) {
+ 003A                   .dbline 58
+ 003A           ;               dat = 0;
+ 003A 560100            mov [X+1],0
+ 003D                   .dbline 60
+ 003D           ;               
+ 003D           ;               if (USB_bGetEPCount(1) == 6) {
+ 003D 10                push X
+ 003E 5001              mov A,1
+ 0040 7C0000            xcall _USB_bGetEPCount
+ 0043 20                pop X
+ 0044 3906              cmp A,6
+ 0046 B019              jnz L9
+ 0048                   .dbline 61
+ 0048           ;                       USB_bReadOutEP(1, inten, 6);
+ 0048                   .dbline 61
+ 0048 10                push X
+ 0049 5006              mov A,6
+ 004B 08                push A
+ 004C 5000              mov A,>_inten
+ 004E 08                push A
+ 004F 5000              mov A,<_inten
+ 0051 08                push A
+ 0052 5001              mov A,1
+ 0054 08                push A
+ 0055 7C0000            xcall _USB_bReadOutEP
+ 0058 38FC              add SP,-4
+ 005A                   .dbline 62
+ 005A           ;                       USB_EnableEP(1);
+ 005A 5001              mov A,1
+ 005C 7C0000            xcall _USB_EnableEP
+ 005F 20                pop X
+ 0060                   .dbline 63
+ 0060           ;               }
+ 0060           L9:
+ 0060                   .dbline 66
+ 0060           ;               
+ 0060           ;               // 100% isn't possible...err
+ 0060           ;               if (cnt < inten[2]) dat |= TOP_BLUE;
+ 0060 5200              mov A,[X+0]
+ 0062 3A02              cmp A,[_inten+2]
+ 0064 D004              jnc L11
+ 0066           X1:
+ 0066                   .dbline 66
+ 0066 2F0110            or [X+1],16
+ 0069           L11:
+ 0069                   .dbline 67
+ 0069           ;               if (cnt < inten[0]) dat |= TOP_RED;
+ 0069 5200              mov A,[X+0]
+ 006B 3A00              cmp A,[_inten]
+ 006D D004              jnc L14
+ 006F           X2:
+ 006F                   .dbline 67
+ 006F 2F0104            or [X+1],4
+ 0072           L14:
+ 0072                   .dbline 68
+ 0072           ;               if (cnt < inten[1]) dat |= TOP_GREEN;
+ 0072 5200              mov A,[X+0]
+ 0074 3A01              cmp A,[_inten+1]
+ 0076 D004              jnc L16
+ 0078           X3:
+ 0078                   .dbline 68
+ 0078 2F0101            or [X+1],1
+ 007B           L16:
+ 007B                   .dbline 69
+ 007B           ;               if (cnt < inten[5]) dat |= BOT_BLUE;
+ 007B 5200              mov A,[X+0]
+ 007D 3A05              cmp A,[_inten+5]
+ 007F D004              jnc L19
+ 0081           X4:
+ 0081                   .dbline 69
+ 0081 2F0120            or [X+1],32
+ 0084           L19:
+ 0084                   .dbline 70
+ 0084           ;               if (cnt < inten[3]) dat |= BOT_RED;
+ 0084 5200              mov A,[X+0]
+ 0086 3A03              cmp A,[_inten+3]
+ 0088 D004              jnc L22
+ 008A           X5:
+ 008A                   .dbline 70
+ 008A 2F0108            or [X+1],8
+ 008D           L22:
+ 008D                   .dbline 71
+ 008D           ;               if (cnt < inten[4]) dat |= BOT_GREEN;
+ 008D 5200              mov A,[X+0]
+ 008F 3A04              cmp A,[_inten+4]
+ 0091 D004              jnc L25
+ 0093           X6:
+ 0093                   .dbline 71
+ 0093 2F0102            or [X+1],2
+ 0096           L25:
+ 0096                   .dbline 73
+ 0096           ;               
+ 0096           ;               P0DATA = dat;
+ 0096 5201              mov A,[X+1]
+ 0098 6000              mov REG[0],A
+ 009A                   .dbline 76
+ 009A           ;               
+ 009A           ;               // will rollover
+ 009A           ;               cnt += 1;
+ 009A 7700              inc [X+0]
+ 009C                   .dbline 77
+ 009C           ;       }
+ 009C           L7:
+ 009C                   .dbline 57
+ 009C 8F9D              xjmp L6
+ 009E           X0:
+ 009E                   .dbline -2
+ 009E           L2:
+ 009E 38FE              add SP,-2
+ 00A0 20                pop X
+ 00A1                   .dbline 0 ; func end
+ 00A1 8FFF              jmp .
+ 00A3                   .dbsym l dat 1 c
+ 00A3                   .dbsym l cnt 0 c
+ 00A3                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile C:\Users\IEUser\DOCUME~1\PSOCDE~1.4PR\PDPROJ~1\PDPROJ~1\main.c
+ 0000           _inten::
+ 0000                   .blkb 6
+ 0006                   .dbsym e inten _inten A[6:6]c

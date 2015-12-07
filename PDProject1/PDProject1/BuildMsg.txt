@@ -1,0 +1,30 @@
+Starting MAKE...
+creating project.mk 
+
+lib/psocconfig.asm
+
+lib/psocconfigtbl.asm
+
+lib/usb.asm
+
+lib/usb_descr.asm
+
+lib/usb_drv.asm
+
+lib/usb_std.asm
+
+lib/usbint.asm
+
+./boot.asm
+
+Linking..
+
+  ROM 74% full. 2255 out of 3072 bytes used (does not include absolute areas).
+
+  RAM 20% full. 49 bytes used (does not include stack usage).
+
+Built with ICCM8C STD V7.05.00
+
+ 
+PDProject1 - 0 error(s) 0 warning(s) 10:41:31
+

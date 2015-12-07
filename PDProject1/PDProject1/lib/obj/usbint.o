@@ -1,0 +1,60 @@
+XH
+H 2 areas D global symbols
+M usbint.asm
+S _USB_Start Ref0000
+S USB_EPDataToggle Ref0000
+S USB_bCurrentDevice Ref0000
+S USB_EndpointAPIStatus Ref0000
+S USB_bActivity Ref0000
+A text size 27 flags 0
+dbfile lib/usbint.asm
+dbfunc 0 ? 0 I
+dbline 3F 0
+dbline 40 1
+dbline 41 4
+dbline 42 6
+dbline 43 9
+dbline 44 A
+dbline 5F B
+dbline 60 C
+dbline 61 F
+dbline 62 11
+dbline 63 14
+dbline 64 15
+dbline 80 16
+dbline 81 17
+dbline 82 18
+dbline 83 1A
+dbline 84 1D
+dbline 85 1E
+dbline 88 1F
+dbline 9A 20
+dbline 2 23
+dbline 9C 26
+dbfile ./lib/USB.inc
+dbfunc 0 ? 0 I
+dbfile lib/usbint.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/USB_macros.inc
+dbfunc 0 ? 0 I
+dbfile lib/usbint.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~1/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY7C63~2/m8c.inc
+dbfunc 0 ? 0 I
+S USB_RESET_ISR Def0016
+S USB_EP1_ISR Def0000
+S USB_EP2_ISR Def000B
+S USB_ACT_ISR Def0020
+S _USB_RESET_ISR Def0016
+S _USB_EP1_ISR Def0000
+S _USB_EP2_ISR Def000B
+S _USB_ACT_ISR Def0020
+A bss size 0 flags 20
+T 00 00 08 36 00 00 02 5D 45 55 00 01 01 18 7E 08
+R 00 00 00 00 03 04 00 01 03 0A 00 03
+T 00 0C 36 00 00 04 5D 46 55 00 02 01 18 7E 08 10
+R 00 00 00 00 03 03 00 01 03 09 00 03
+T 00 18 51 00 00 7C 00 00 20 18 7E 55 00 00 01 41
+R 00 00 00 00 03 03 00 02 02 06 00 00 03 0C 00 04
+T 00 24 E1 EF 7E
+R 00 00 00 00

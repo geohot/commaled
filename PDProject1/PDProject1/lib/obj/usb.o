@@ -1,0 +1,336 @@
+XH
+H 3 areas 56 global symbols
+M usb.asm
+S USB_DeviceStatus Ref0000
+S USB_TransferType Ref0000
+S USB_Configuration Ref0000
+S USB_EPDataToggle Ref0000
+S Port_1_Data_SHADE Ref0000
+S USB_bCurrentDevice Ref0000
+S USB_EndpointAPIStatus Ref0000
+A text size 0 flags 0
+dbfile lib/usb.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/USB.inc
+dbfunc 0 ? 0 I
+dbfile lib/usb.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/USB_macros.inc
+dbfunc 0 ? 0 I
+dbfile lib/usb.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~1/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY7C63~2/m8c.inc
+dbfunc 0 ? 0 I
+A bss size 5 flags 20
+S USB_APIEPNumber Def0002
+S USB_APICount Def0003
+S _USB_APIEPNumber Def0002
+S _USB_APICount Def0003
+S USB_APITemp Def0000
+S USB_bActivity Def0004
+A UserModules size 161 flags 0
+dbfile lib/usb.asm
+dbfunc 0 ? 3 I
+dbline 7E 3
+dbline 7F 6
+dbline 81 9
+dbline 83 B
+dbline 84 E
+dbline 85 11
+dbline 87 14
+dbline 94 17
+dbline 95 1A
+dbline 96 1D
+dbline 97 20
+dbline 98 21
+dbline 2 23
+dbline 9B 26
+dbline B0 27
+dbline B2 2A
+dbline B3 2D
+dbline B4 30
+dbline B5 33
+dbline B6 36
+dbline B7 39
+dbline 2 3C
+dbline BA 3F
+dbline D4 40
+dbline D5 42
+dbline D6 44
+dbline D8 46
+dbline DB 47
+dbline 2 4A
+dbline DD 4D
+dbline F2 4E
+dbline F3 50
+dbline 10A 51
+dbline 10B 53
+dbline 10D 55
+dbline 10E 56
+dbline 10F 58
+dbline 112 5A
+dbline 115 5C
+dbline 12B 5D
+dbline 12C 60
+dbline 12E 62
+dbline 12F 64
+dbline 132 66
+dbline 135 68
+dbline 14A 69
+dbline 14B 6B
+dbline 14D 6D
+dbline 14E 6E
+dbline 14F 70
+dbline 150 72
+dbline 151 74
+dbline 154 76
+dbline 157 78
+dbline 171 79
+dbline 172 7C
+dbline 174 7E
+dbline 176 80
+dbline 177 82
+dbline 178 84
+dbline 17A 85
+dbline 17B 87
+dbline 17E 89
+dbline 17F 8B
+dbline 180 8D
+dbline 181 8F
+dbline 182 91
+dbline 183 92
+dbline 187 94
+dbline 188 96
+dbline 189 97
+dbline 18A 99
+dbline 18B 9B
+dbline 18C 9D
+dbline 18F 9F
+dbline 190 A1
+dbline 192 A3
+dbline 194 A6
+dbline 195 A8
+dbline 2 AA
+dbline 198 AC
+dbline 199 AF
+dbline 19A B1
+dbline 19B B3
+dbline 19C B5
+dbline 19D B8
+dbline 2 BA
+dbline 1A2 BC
+dbline 1BD C0
+dbline 1BE C2
+dbline 1BF C4
+dbline 1C0 C6
+dbline 1C2 C8
+dbline 1C3 C9
+dbline 1C4 CC
+dbline 1C5 CE
+dbline 1C8 D1
+dbline 1E0 D2
+dbline 1E1 D4
+dbline 1E2 D6
+dbline 1E3 D8
+dbline 1E5 DA
+dbline 1E6 DB
+dbline 1E7 DD
+dbline 1EA E0
+dbline 202 E1
+dbline 203 E3
+dbline 205 E5
+dbline 206 E7
+dbline 208 E9
+dbline 209 EC
+dbline 20A EF
+dbline 20D F1
+dbline 20E F3
+dbline 210 F5
+dbline 211 F8
+dbline 212 FB
+dbline 215 FD
+dbline 216 FF
+dbline 218 101
+dbline 21B 104
+dbline 21C 106
+dbline 21D 108
+dbline 21E 10B
+dbline 221 10C
+dbline 224 10F
+dbline 23C 110
+dbline 23D 113
+dbline 254 114
+dbline 255 117
+dbline 276 118
+dbline 277 119
+dbline 278 11B
+dbline 279 11D
+dbline 27C 11F
+dbline 27D 121
+dbline 280 123
+dbline 281 125
+dbline 282 126
+dbline 283 128
+dbline 284 12A
+dbline 285 12C
+dbline 286 12E
+dbline 287 130
+dbline 288 132
+dbline 28C 134
+dbline 28D 136
+dbline 28F 138
+dbline 290 139
+dbline 291 13B
+dbline 293 13D
+dbline 294 13F
+dbline 295 141
+dbline 298 142
+dbline 299 144
+dbline 29A 146
+dbline 29B 147
+dbline 29C 149
+dbline 29F 14B
+dbline 2A2 14D
+dbline 2B7 14E
+dbline 2B8 14F
+dbline 2B9 151
+dbline 2BA 153
+dbline 2CD 154
+dbline 2CE 156
+dbline 2CF 158
+dbline 2D0 15B
+dbline 2D2 15D
+dbline 2D4 160
+S USB_SetPowerStatus Def0154
+S $sb$USB_Stop Def0027
+S $se$USB_Stop Def0040
+S $sb$USB_bReadOutEP Def0118
+S $se$USB_bReadOutEP Def014E
+S _USB_XLoadEP Def0079
+S _USB_Resume Def0114
+S $sb$USB_SetPowerStatus Def0154
+S USB_bGetConfiguration Def004E
+S USB_EnableEP Def00C0
+S $se$USB_SetPowerStatus Def0161
+S _USB_DisableOutEP Def00D2
+S USB_Suspend Def0110
+S _USB_bCheckActivity Def0040
+S USB_Force Def00E1
+S $sb$USB_bGetConfiguration Def004E
+S $se$USB_bGetConfiguration Def0051
+S $sb$USB_Suspend Def0110
+S $se$USB_Suspend Def0114
+S _USB_Stop Def0027
+S _USB_bReadOutEP Def0118
+S USB_bRWUEnabled Def005D
+S $sb$USB_Force Def00E1
+S USB_Start Def0003
+S $se$USB_Force Def0110
+S USB_EnableOutEP Def00C0
+S USB_bGetEPState Def0051
+S _USB_SetPowerStatus Def0154
+S USB_bGetEPCount Def0069
+S USB_bGetEPAckState Def014E
+S $sb$USB_bRWUEnabled Def005D
+S $se$USB_bRWUEnabled Def0069
+S $sb$USB_Start Def0003
+S $se$USB_Start Def0027
+S $sb$USB_EnableOutEP Def00C0
+S $se$USB_EnableOutEP Def00D2
+S $sb$USB_bGetEPState Def0051
+S $lb$EPREGPTR Def00BD
+S $se$USB_bGetEPState Def005D
+S $le$EPREGPTR Def00C0
+S _USB_bGetConfiguration Def004E
+S _USB_EnableEP Def00C0
+S $sb$USB_bGetEPCount Def0069
+S $se$USB_bGetEPCount Def0079
+S _USB_Suspend Def0110
+S $sb$USB_bGetEPAckState Def014E
+S $se$USB_bGetEPAckState Def0154
+S USB_DisableEP Def00D2
+S _USB_Force Def00E1
+S USB_USB_EP_BIT_LOOKUP Def0000
+S _USB_bRWUEnabled Def005D
+S $lb$USB_USB_EP_BIT_LOOKUP Def0000
+S USB_XLoadEP Def0079
+S _USB_Start Def0003
+S $le$USB_USB_EP_BIT_LOOKUP Def0003
+S USB_Resume Def0114
+S _USB_EnableOutEP Def00C0
+S _USB_bGetEPState Def0051
+S _USB_bGetEPCount Def0069
+S USB_DisableOutEP Def00D2
+S _USB_bGetEPAckState Def014E
+S $sb$USB_XLoadEP Def0079
+S $se$USB_XLoadEP Def00C0
+S USB_bCheckActivity Def0040
+S $sb$USB_Resume Def0114
+S $se$USB_Resume Def0118
+S $sb$USB_DisableOutEP Def00D2
+S $se$USB_DisableOutEP Def00E1
+S USB_Stop Def0027
+S _USB_DisableEP Def00D2
+S $sb$USB_bCheckActivity Def0040
+S USB_bReadOutEP Def0118
+S $se$USB_bCheckActivity Def004E
+T 00 00 01 02 04
+R 00 00 00 02
+T 00 03 62 0D 00 62 0E 00 53 00 00 55 00 00 00 55
+R 00 00 00 02 03 09 00 05 03 0C 00 01
+T 00 0F 00 00 00 55 00 00 00 55 00 00 00 62 40 80
+R 00 00 00 02 03 02 00 02 03 06 00 00 03 0A 00 03
+T 00 1A 43 74 80 62 44 03 40 5D 44 43 E1 19 7F 55
+R 00 00 00 02
+T 00 28 00 00 00 55 00 00 00 55 00 00 00 55
+R 00 00 00 02 03 02 00 05 03 06 00 01 03 0A 00 02
+T 00 31 00 00 00 55 00 04 00 62 40 00 41 74 7F 41
+R 00 00 00 02 03 02 00 00 01 06 00 01
+T 00 3D E1 E0 7F 51 00 04 39 01 A0 02 7F 55 00 04
+R 00 00 00 02 01 06 00 01 01 0E 00 01
+T 00 49 00 43 E1 10 7F 51 00 00 7F 39 03 D0 06 5C
+R 00 00 00 02 03 08 00 02
+T 00 56 52 00 00 80 03 50 00 7F 47 00 00 02 B0 05
+R 00 00 00 02 03 03 00 06 03 0B 00 00
+T 00 62 50 00 80 03 50 01 7F 39 03 D0 0A 5C 5E 41
+R 00 00 00 02
+T 00 70 21 1F 11 02 80 03 50 00 7F 3C 00 02 03 D0
+R 00 00 00 02 01 0C 00 01
+T 00 7D 3F 5A 00 00 51 00 02 F0 39 5C 51 00 03 53
+R 00 00 00 02 01 04 00 01 01 07 00 01 01 0D 00 01
+T 00 88 00 01 7A 00 01 C0 08 3E 00 00 61 00 75 8F
+R 00 00 00 02 01 02 00 01 01 05 00 01 01 0A 00 01
+T 00 93 F6 58 00 02 5B FF 67 22 00 00 A0 03 50 80
+R 00 00 00 02 01 04 00 01 03 0A 00 03
+T 00 9F 2A 00 03 61 41 56 00 00 00 5D F7 53 00 00
+R 00 00 00 02 01 03 00 01 03 08 00 06 01 0E 00 01
+T 00 AA 70 FE 63 44 0D 5E 44 39 0D BF F8 47 00 00
+R 00 00 00 02 01 0E 00 01
+T 00 B7 01 A0 03 71 01 7F 50 58 60 39 00 A0 0E 39
+R 00 00 00 02
+T 00 C5 03 D0 0A 5C 56 00 00 00 5E 44 63 44 09 7F
+R 00 00 00 02 03 07 00 06
+T 00 D2 39 00 A0 0B 39 03 D0 07 5C 5E 44 63 44 08
+R 00 00 00 02
+T 00 E0 7F 39 FF A0 28 39 02 B0 09 2E 00 00 02 26
+R 00 00 00 02 03 0C 00 04
+T 00 ED 00 00 FE 80 14 39 01 B0 09 2E 00 00 01 26
+R 00 00 00 02 03 02 00 04 03 0C 00 04
+T 00 F9 00 00 FD 80 08 39 00 A0 0F 26 00 00 FC 51
+R 00 00 00 02 03 02 00 04 03 0C 00 04
+T 01 05 00 00 60 01 43 74 01 7F 41 74 FE 7F 41 40
+R 00 00 00 02 03 02 00 04
+T 01 12 7F 7F 43 40 80 7F 4F 52 FD 39 03 D0 2F 52
+R 00 00 00 02
+T 01 20 FA 53 00 00 52 FD 5C 5E 41 21 0F 11 02 53
+R 00 00 00 02 01 04 00 01
+T 01 2D 00 03 3A 00 00 D0 03 53 00 00 51
+R 00 00 00 02 01 02 00 01 01 05 00 01 01 0A 00 01
+T 01 35 00 00 A0 16 4F 52 FC 53 00 01 52 FD FF 7C
+R 00 00 00 02 01 02 00 01 01 0A 00 01
+T 01 41 5C 5E 00 3F 00 01 75 7A 00 00 BF F8 51
+R 00 00 00 02 01 06 00 01 01 0A 00 01
+T 01 4C 00 03 7F 5C 5E 44 21 10 7F 39 00 A0 06 2E
+R 00 00 00 02 01 02 00 01
+T 01 59 00 00 01 80 04 26 00 00 FE 7F
+R 00 00 00 02 03 02 00 00 03 08 00 00

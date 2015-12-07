@@ -1,0 +1,104 @@
+XH
+H 3 areas B global symbols
+M psocconfig.asm
+S LoadConfigTBL_pdproject1_Bank0 Ref0000
+S LoadConfigTBL_pdproject1_Bank1 Ref0000
+S LoadConfigTBL_pdproject1_Ordered Ref0000
+A text size 0 flags 0
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/GlobalParams.inc
+dbfunc 0 ? 0 I
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~1/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY7C63~2/m8c.inc
+dbfunc 0 ? 0 I
+A psoc_config size 61 flags 0
+dbfile lib/psocconfig.asm
+dbfunc 0 ? 0 I
+dbline 3D 0
+dbline 3F 3
+dbline 40 6
+dbline 44 9
+dbline 5D A
+dbline 2 B
+dbline 5F D
+dbline 60 F
+dbline 62 10
+dbline 63 12
+dbline 64 14
+dbline 66 17
+dbline 67 19
+dbline 69 1A
+dbline 6A 1C
+dbline 6B 1E
+dbline 2 21
+dbline 6E 23
+dbline 71 24
+dbline 87 25
+dbline 88 27
+dbline 89 28
+dbline 8A 29
+dbline 8B 2A
+dbline 8C 2D
+dbline 8D 2F
+dbline 8F 32
+dbline 90 33
+dbline 2 34
+dbline 2 36
+dbline 95 39
+dbline 96 3A
+dbline 97 3B
+dbline 98 3C
+dbline 99 3E
+dbline 9A 40
+dbline 9B 41
+dbline 9C 44
+dbline 2 46
+dbline 9F 48
+dbline A0 4A
+dbline A1 4B
+dbline A2 4C
+dbline A3 4D
+dbline A4 4F
+dbline A5 50
+dbline A6 51
+dbline A7 52
+dbline A8 53
+dbline A9 55
+dbline AA 57
+dbline AB 58
+dbline AC 59
+dbline AD 5A
+dbline AE 5C
+dbline B0 5E
+dbline B2 60
+S LoadConfig_pdproject1 Def000A
+S LoadConfigInit Def0000
+S _LoadConfig_pdproject1 Def000A
+S _LoadConfigInit Def0000
+A InterruptRAM size 1 flags 20
+S _NO_SHADOW Def0000
+S _Port_1_Data_SHADE Def0000
+S NO_SHADOW Def0000
+S Port_1_Data_SHADE Def0000
+T 00 00 55 00 00 00 7C 00 0A 7C 00 00 7F 10 70 EF
+R 00 00 00 01 01 03 00 02 00 07 00 01 02 0A 00 02
+T 00 0D 50 00 67 50 00 00 57 00 00 7C 00 25 50 01
+R 00 00 00 01 43 06 00 00 03 09 00 00 00 0C 00 01
+T 00 19 67 50 00 00 57 00 00 7C 00 25 70 EF 20 7F
+R 00 00 00 01 43 04 00 01 03 07 00 01 00 0A 00 01
+T 00 25 38 02 10 08 4F 56 FC 00 D0 04 56 FC 01 18
+R 00 00 00 01
+T 00 33 20 70 EF 62 E3 00 10 08 28 39 FF A0 1F 4F
+R 00 00 00 01
+T 00 41 48 FC 01 A0 03 71 10 54 FD 18 20 75 09 00
+R 00 00 00 01
+T 00 4F 10 08 28 4F 59 FD 61 00 18 20 75 09 00 8F
+R 00 00 00 01
+T 00 5D D7 38 FC 7F
+R 00 00 00 01

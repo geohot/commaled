@@ -1,0 +1,27 @@
+XH
+H 3 areas 3 global symbols
+M psocconfigtbl.asm
+A text size 0 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbfile C:/PROGRA~1/Cypress/PSOCDE~1/5.4/Common/CYPRES~1/tools/include/CY7C63~2/m8c.inc
+dbfunc 0 ? 0 I
+A lit size 2E flags 0
+S LoadConfigTBL_pdproject1_Bank0 Def0000
+S LoadConfigTBL_pdproject1_Bank1 Def0029
+A psoc_config size 3 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 38 2
+S LoadConfigTBL_pdproject1_Ordered Def0000
+T 00 00 32 00 30 00 05 01 06 01 07 01 08 01 09 01
+R 00 00 00 01
+T 00 0E 0A 01 0B 00 0D 00 0E 00 0F 00 10 00 11 00
+R 00 00 00 01
+T 00 1C 12 00 13 00 3D 00 2B 00 31 80 2A 00 FF E0
+R 00 00 00 01
+T 00 2A 03 E3 14 FF
+R 00 00 00 01
+T 00 00 70 EF 7F
+R 00 00 00 02
