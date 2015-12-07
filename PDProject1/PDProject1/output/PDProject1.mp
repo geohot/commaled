@@ -1,6 +1,6 @@
 Project:      output/PDProject1
 Build Number: 0
-Date:         Mon Dec 07 10:41:30 2015
+Date:         Mon Dec 07 10:52:58 2015
 Compiler:     ICCM8C
 Version:      7.05.00
 
@@ -151,23 +151,23 @@ Area                               Addr   Size   Decimal Bytes (Attributes)
 
 Area                               Addr   Size   Decimal Bytes (Attributes)
 --------------------------------   ----   ----   ------- ----- ------------
-                            text   0927   00F8 =    248. bytes (rel,con,rom,code)
+                            text   0927   00F5 =    245. bytes (rel,con,rom,code)
 
        Addr  Global Symbol
       -----  --------------------------------
        0927  __text_start
        0927  _main
-       09CA  USB_EP1_ISR
-       09CA  _USB_EP1_ISR
-       09D5  USB_EP2_ISR
-       09D5  _USB_EP2_ISR
-       09E0  USB_RESET_ISR
-       09E0  _USB_RESET_ISR
-       09EA  _USB_ACT_ISR
-       09EA  USB_ACT_ISR
-       09F1  _memsetLMM
-       09FC  _memset
-       0A1F  __text_end
+       09C7  USB_EP1_ISR
+       09C7  _USB_EP1_ISR
+       09D2  USB_EP2_ISR
+       09D2  _USB_EP2_ISR
+       09DD  USB_RESET_ISR
+       09DD  _USB_RESET_ISR
+       09E7  _USB_ACT_ISR
+       09E7  USB_ACT_ISR
+       09EE  _memsetLMM
+       09F9  _memset
+       0A1C  __text_end
 
 Area                               Addr   Size   Decimal Bytes (Attributes)
 --------------------------------   ----   ----   ------- ----- ------------

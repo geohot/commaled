@@ -38,7 +38,7 @@ void main(void) {
 	memset(inten, 0, 6);
 	
 	// testing
-	inten[0] = 10;
+	//inten[0] = 10;
 	
 	// enable sleep timer
 	//INT_MSK0 |= INT_MSK0_SLEEP;
@@ -63,12 +63,12 @@ void main(void) {
 		}
 		
 		// 100% isn't possible...err
-		if (cnt < inten[2]) dat |= TOP_BLUE;
-		if (cnt < inten[0]) dat |= TOP_RED;
-		if (cnt < inten[1]) dat |= TOP_GREEN;
-		if (cnt < inten[5]) dat |= BOT_BLUE;
-		if (cnt < inten[3]) dat |= BOT_RED;
-		if (cnt < inten[4]) dat |= BOT_GREEN;
+		if (cnt < inten[0]) dat |= TOP_BLUE;
+		if (cnt < inten[1]) dat |= TOP_RED;
+		if (cnt < inten[2]) dat |= TOP_GREEN;
+		if (cnt < inten[3]) dat |= BOT_BLUE;
+		if (cnt < inten[4]) dat |= BOT_RED;
+		if (cnt < inten[5]) dat |= BOT_GREEN;
 		
 		P0DATA = dat;
 		

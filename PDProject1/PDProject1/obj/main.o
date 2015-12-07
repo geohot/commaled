@@ -7,7 +7,7 @@ S _USB_EnableEP Ref0000
 S _USB_Start Ref0000
 S _USB_bGetEPCount Ref0000
 S _memset Ref0000
-A text size A3 flags 0
+A text size A0 flags 0
 dbfile ./main.c
 dbfile C:\Users\IEUser\DOCUME~1\PSOCDE~1.4PR\PDPROJ~1\PDPROJ~1\main.c
 dbfunc e main 0 fV
@@ -16,39 +16,38 @@ dbsym l cnt 0 c
 dbline FFFFFFFF 0
 dbline 22 4
 dbline 26 4
-dbline 29 19
-dbline 2F 1C
-dbline 32 1E
-dbline 33 25
-dbline 33 25
-dbline 33 25
-dbline 34 2E
-dbline 38 35
-dbline 39 3A
-dbline 3A 3A
-dbline 3C 3D
-dbline 3D 48
-dbline 3D 48
-dbline 3E 5A
-dbline 3F 60
-dbline 42 60
-dbline 42 66
-dbline 43 69
-dbline 43 6F
-dbline 44 72
-dbline 44 78
-dbline 45 7B
-dbline 45 81
-dbline 46 84
-dbline 46 8A
-dbline 47 8D
-dbline 47 93
-dbline 49 96
-dbline 4C 9A
-dbline 4D 9C
-dbline 39 9C
-dbline FFFFFFFE 9E
-dbline 0 A1
+dbline 2F 19
+dbline 32 1B
+dbline 33 22
+dbline 33 22
+dbline 33 22
+dbline 34 2B
+dbline 38 32
+dbline 39 37
+dbline 3A 37
+dbline 3C 3A
+dbline 3D 45
+dbline 3D 45
+dbline 3E 57
+dbline 3F 5D
+dbline 42 5D
+dbline 42 63
+dbline 43 66
+dbline 43 6C
+dbline 44 6F
+dbline 44 75
+dbline 45 78
+dbline 45 7E
+dbline 46 81
+dbline 46 87
+dbline 47 8A
+dbline 47 90
+dbline 49 93
+dbline 4C 97
+dbline 4D 99
+dbline 39 99
+dbline FFFFFFFE 9B
+dbline 0 9E
 S _main Def0000
 A bss size 6 flags 20
 dbfile C:\Users\IEUser\DOCUME~1\PSOCDE~1.4PR\PDPROJ~1\PDPROJ~1\main.c
@@ -56,27 +55,27 @@ dbsym e inten 0 A[6:6]c
 S _inten Def0000
 T 00 00 10 4F 38 02 50 00 08 50 06 08 50 00 08 08
 R 00 00 00 00
-T 00 0E 50 00 00 08 50 00 00 08 7C 00 00 38 FA 55
+T 00 0E 50 00 00 08 50 00 00 08 7C 00 00 38 FA 71
 R 00 00 00 00 41 03 00 01 01 07 00 01 02 0B 00 05
-T 00 1A 00 00 0A 71 01 10 50 00 7C 00 00 20 10 7C
-R 00 00 00 00 01 02 00 01 02 0B 00 03
-T 00 27 00 00 20 39 00 AF F8 10 50 01 7C 00 00 20
-R 00 00 00 00 02 02 00 01 02 0D 00 02
-T 00 35 56 00 00 80 63 56 01 00 10 50 01 7C 00 00
-R 00 00 00 00 02 0E 00 04
-T 00 43 20 39 06 B0 19 10 50 06 08 50 00 00 08 50
-R 00 00 00 00 41 0C 00 01
-T 00 50 00 00 08 50 01 08 7C 00 00 38 FC 50 01 7C
-R 00 00 00 00 01 02 00 01 02 09 00 00
-T 00 5D 00 00 20 52 00 3A 00 02 D0 04 2F 01 10 52
-R 00 00 00 00 02 02 00 02 01 08 00 01
-T 00 6A 00 3A 00 00 D0 04 2F 01 04 52 00 3A 00 01
+T 00 1A 01 10 50 00 7C 00 00 20 10 7C 00 00 20 39
+R 00 00 00 00 02 07 00 03 02 0C 00 01
+T 00 28 00 AF F8 10 50 01 7C 00 00 20 56 00 00 80
+R 00 00 00 00 02 09 00 02
+T 00 36 63 56 01 00 10 50 01 7C 00 00 20 39 06 B0
+R 00 00 00 00 02 0A 00 04
+T 00 44 19 10 50 06 08 50 00 00 08 50 00 00 08 50
+R 00 00 00 00 41 08 00 01 01 0C 00 01
+T 00 50 01 08 7C 00 00 38 FC 50 01 7C 00 00 20 52
+R 00 00 00 00 02 05 00 00 02 0C 00 02
+T 00 5E 00 3A 00 00 D0 04 2F 01 10 52 00 3A 00 01
 R 00 00 00 00 01 04 00 01 01 0E 00 01
-T 00 76 D0 04 2F 01 01 52 00 3A 00 05 D0 04 2F 01
+T 00 6A D0 04 2F 01 04 52 00 3A 00 02 D0 04 2F 01
 R 00 00 00 00 01 0A 00 01
-T 00 83 20 52 00 3A 00 03 D0 04 2F 01 08 52 00 3A
+T 00 77 01 52 00 3A 00 03 D0 04 2F 01 20 52 00 3A
 R 00 00 00 00 01 06 00 01
-T 00 90 00 04 D0 04 2F 01 02 52 01 60 00 77 00 8F
-R 00 00 00 00 01 02 00 01
-T 00 9D 9D 38 FE 20 8F FF
+T 00 84 00 04 D0 04 2F 01 08 52 00 3A 00 05 D0 04
+R 00 00 00 00 01 02 00 01 01 0C 00 01
+T 00 90 2F 01 02 52 01 60 00 77 00 8F 9D 38 FE 20
+R 00 00 00 00
+T 00 9E 8F FF
 R 00 00 00 00

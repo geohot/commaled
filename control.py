@@ -9,8 +9,7 @@ print handle
 
 inten = [0]*6
 while 1:
-  #inten = [random.randint(0, 255) for x in range(6)]
-  inten = [255,255,0,0,0,0]
+  inten = [random.randint(0, 255) for x in range(6)]
   handle.bulkWrite(1, ''.join(map(chr, inten)))
-  time.sleep(0.1)
+  time.sleep(0.2)
 
