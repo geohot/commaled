@@ -7,9 +7,13 @@ context = usb1.USBContext()
 handle = context.openByVendorIDAndProductID(0x1337, 0x1337)
 print handle
 
-inten = [0]*6
+cnt = 0
 while 1:
-  inten = [random.randint(0, 255) for x in range(6)]
+  inten = [0]*6
+  inten[cnt >> 8] = cnt&0xFF
   handle.bulkWrite(1, ''.join(map(chr, inten)))
-  time.sleep(0.2)
+  time.sleep(0.01)
+  cnt += 4
+  if cnt >= 0x300:
+    cnt = 0
 
