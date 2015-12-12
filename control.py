@@ -7,6 +7,13 @@ context = usb1.USBContext()
 handle = context.openByVendorIDAndProductID(0x1337, 0x1337)
 print handle
 
+def off():
+  print "*** turning off"
+  handle.bulkWrite(1, ''.join(map(chr, [0]*6)))
+
+import atexit
+atexit.register(off)
+
 cnt = 0
 while 1:
   inten = [0]*6
